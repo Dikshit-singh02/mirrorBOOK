@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+}
+
+nav{
+    display: flex; justify-content
+   : space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding:10px 20px;
+}
+
+.leftNav{
+    display: flex;
+    height: 20px;
+    width: 20%;
+    
+}
+.leftNav img{
+    border-radius: 40%;
+}
+.leftNav input{
+    border-radius: 30px;
+}
+
+.midNav{
+    display: flex;
+    height: 20px;
+    width: 60%;
+}
