@@ -19,7 +19,7 @@ nav{
 .leftNav{
     display: flex;
     height: 20px;
-    width: 30%;
+    width: 25%;
     
 }
 .leftNav img{
@@ -34,9 +34,47 @@ nav{
     height: 20px;
     width: 50%;
     justify-content:space-around;
+    border-radius: 50%;
 }
 
 .rightNav{
     display: flex;
     height: 30px;
+    width:25%;
+    justify-content:space-around;
+    margin-left: 80px;
+}
+.rightNav img{
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.content{
+display: flex;
+}
+.leftcontent{
+    width: 25%;
+    margin-left: 20px;
+    
+}
+.profile{
+    display: flex;
+}
+.profile img{
+    height:30px;
+    border-radius: 20px;
+    
+}
+.profile h3{
+    padding-left: 10px;
+    padding-top: 7px;
+}
+.profile {
+    padding-bottom: 15px;
+}
+.midcontent{
+    width: 50%;
+}
+.rightcontent{
+    width: 25%;
 }
