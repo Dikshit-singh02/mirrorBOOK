@@ -1,131 +1,291 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+/* Body */
+body {
     background-color: whitesmoke;
-    overflow-y: hidden;
+    font-family: Arial, sans-serif;
 }
 
-nav{
-    display: flex; justify-content
-   : space-between;
+/* Navigation */
+nav {
+    /* position: fixed; */
+
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
-    color: white;
-    padding:10px 20px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.leftNav{
+.leftNav, .midNav, .rightNav {
     display: flex;
-    height: 20px;
-    width: 25%;
-    
-}
-.leftNav img{
-    border-radius: 40%;
-}
-.leftNav input{
-    border-radius: 30px;
+    align-items: center;
 }
 
-.midNav{
-    display: flex;
-    height: 20px;
-    width: 50%;
-    justify-content:space-around;
+.leftNav input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.leftNav img {
     border-radius: 50%;
+    width: 35px;  /* Adjusted size */
+    height: 35px; /* Adjusted size */
 }
 
-.rightNav{
-    display: flex;
-    height: 30px;
-    width:25%;
-    justify-content:space-around;
-    margin-left: 80px;
+.midNav img, .rightNav img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
 }
-.rightNav img{
+
+.rightNav img {
     border-radius: 50%;
     background-color: whitesmoke;
 }
 
-.content{
-display: flex;
-}
-.leftcontent{
-    width: 25%;
-    margin-left: 20px;
-    overflow-y: scroll;
-    
-}
-.profile{
+/* Content Layout */
+.content {
     display: flex;
+    margin-top: 20px;
 }
-.profile img{
-    height:30px;
-    border-radius: 20px;
-    
+
+/* Left Sidebar */
+.leftcontent {
+    position: fixed;
+    left: 0;
+    width: 25%;
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
-.profile h3{
-    padding-left: 10px;
-    padding-top: 7px;
-}
+
 .profile {
-    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
-.midcontent{
+
+.profile img {
+    width: 30px;  /* Adjusted size */
+    height: 30px; /* Adjusted size */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Middle Content */
+.midcontent {
+    width: 50%;
+    padding: 0 10px;
+    margin-left: 320px;
+}
+
+.midcontenttop {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.userprofile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.userprofile img {
+    width: 40px;  /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    margin-right: 10px;
+}
+
+.userprofile input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+/* Story Section */
+.story {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.storycontent {
+    flex: 1;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.storycontent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Sidebar */
+.rightcontent {
+    position: fixed;
+    right: 0;
+    width: 25%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.rightcontent h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.rightcontent img {
+    width: 100%;    /* Adjusted size */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact img {
+    width: 30px;  /* Adjusted size */
+    height: 30px; /* Adjusted size */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #333;
+}
+/* Midcontent Bottom (Post Section) */
+.middlecontentbottom {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adds spacing between content sections */
+    padding: 20px;
+}
+
+/* Post */
+.post {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    /* border: 2px solid black; */
-    
+    gap: 15px;  /* Adds space between post elements */
 }
-.userprofile{
+
+/* Post Header (User Info) */
+.postheader {
     display: flex;
-    width: 100%;
-    margin: 10px;
-    height: 50%;
+    align-items: center;
+    gap: 10px;
 }
-.userprofile img{
-    display: flex;
+
+.postheader img {
+    width: 40px;  /* Profile image size */
     height: 40px;
-    border-radius: 30px;
-    
-}
-.userprofile input{
-    border-radius: 30px;
-    width: 75%;
-    margin: 3px;
-}
-.midcontenttop{
-    display: flex;
-    height: 100px;
-     border: 2px solid black; 
-    margin: 1px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
-.story{
-    display: flex;
-    height: 150px;
+.postheader h4 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.postheader p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Post Content (Text) */
+.post p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+#profPIC{
+    width:10%;
+}
+/* Post Image */
+.post img {
     width: 100%;
-    /* border: 2px solid black; */
-    margin-top: 10px;
-    /* border-radius: 20px; */
-}
-
-.story div{
-    margin-left: 2px;
+    max-height: 400px;  /* Ensures the image doesn't stretch too tall */
+    object-fit: cover;
     border-radius: 10px;
 }
-.storycontent{
+
+/* Post Actions (Buttons) */
+.postactions {
     display: flex;
-    /* height: 40px; */
-    width: 20%;
-    border:2px solid black;
-    justify-content: space;
+    justify-content: space-between;
+    gap: 10px;
 }
-.rightcontent{
-    width: 25%;
+
+.postactions button {
+    background-color: #f0f2f5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
 }
+
+.postactions button:hover {
+    background-color: #d8d9db;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
